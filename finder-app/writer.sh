@@ -1,23 +1,9 @@
 #!/bin/bash
 
-if ! [ -z "$1" ];
+if [ $# -ne 2 ]
 then
-        if ! [ -z "$2" ];
-        then
-                if ! [ -z "$3" ];
-                then
-                        echo "Too Many Parameters"
-                        exit 1
-
-                fi
-        else
-                echo "Not enough parameters"
-                exit 1
-        fi
-else
-        echo "Not enough parameters"
-        exit 1
-
+	echo "Incorrect Number of Arguments"
+	exit 1
 fi
 
 writefile=$1
